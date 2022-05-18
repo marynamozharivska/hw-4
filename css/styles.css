@@ -304,6 +304,7 @@ h1, h2, h3, p, ul{
 .staff-info{
     padding-top:30px;
     padding-bottom:30px;
+    background-color: var(--white-color);
 }
 .staff-list{
     display:flex;
@@ -314,9 +315,6 @@ h1, h2, h3, p, ul{
     display:flex;
     justify-content: center;
     align-items: center;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--white-color);
 }
 
 .social-item:not(:last-child){
@@ -329,15 +327,21 @@ h1, h2, h3, p, ul{
     align-items: center;
     width: 44px;
     height: 44px;
-    cursor:pointer;
+    border-radius: 50%;   
+    background: rgba(255, 255, 255, 0.1);
     color: #AFB1B8;
 }
 .social-links:hover,
 .social-links:focus{
     background-color: var(--accent-color);
-    border-radius: 50%;
-    color: var(--white-color);
+    color: var(--white-color); 
+    cursor:pointer;
 }
+.social-icon{
+    fill:var(--color-icon);
+    fill: currentColor;
+}
+
 
 /* Clients*/
 .client-title{
