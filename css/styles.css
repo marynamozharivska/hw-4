@@ -91,16 +91,18 @@ h1, h2, h3, p, ul{
 }
 
 .contact-nav .item:not(:last-child){
-        margin-right: 50px;
+    margin-right: 50px;
 }
 
 .site-nav-link:hover,
 .site-nav-link:focus,
-.site-nav-link.current {
+.site-nav-link.current{
     color:var(--accent-color);
 }
 
 .contact-nav-link{
+    display:flex;
+    align-items:center;
     padding-top: 32px;
     padding-bottom: 32px; 
 
@@ -114,32 +116,21 @@ h1, h2, h3, p, ul{
 
  .contact-nav-link:hover,
  .contact-nav-link:focus{
-     color:var(--accent-color);
+    color:var(--accent-color);
+    cursor: pointer;
  }
-
-.icon-mail,
-.icon-phone{
-   fill:var(--primary-text-color);
-} 
-.icon-mail{
+ 
+.contact-icon{
     fill:currentColor;
     margin-right: 10px;
  }
 
-.icon-mail:hover,
-.icon-mail:focus,
-.icon-phone:hover,
-.icon-phone:focus{
-    fill:var(--accent-color);  
-}
-
-
  /* main */
  /* hero */
  .hero{
-     padding-top: 200px;
-     padding-bottom: 200px;
-     text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
      
     background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
     url(../images/bg-hero.jpg);
@@ -213,7 +204,9 @@ h1, h2, h3, p, ul{
     margin-right: 30px;
 }
 .features-icon{
-    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 120px;
     background-color: #F5F4FA;
     border-radius: 4px;
@@ -293,7 +286,7 @@ h1, h2, h3, p, ul{
 
 .staff-list .staff-prof{
     margin-top: 0;
-    margin-bottom: 30;
+    margin-bottom: 16px;
 
     color:var(--primary-text-color);
     font-size: 16px;
@@ -312,9 +305,7 @@ h1, h2, h3, p, ul{
     align-items: center;
 }
 .social-item{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+list-style: none;
 }
 
 .social-item:not(:last-child){
@@ -394,6 +385,7 @@ color: #212121;
 
 .button{
     padding: 6px 22px;
+    border:transparent;
     border-radius: 4px;
     cursor: pointer;
 
@@ -540,11 +532,13 @@ color: #212121;
 }
 .footer-social .social-link{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
     width: 44px;
     height: 44px;
     background: rgba(255, 255, 255, 0.1);
-    justify-content: center;
-    align-items: center;
     border-radius: 50%;   
 }
 .social-link:hover,
